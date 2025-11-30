@@ -14,9 +14,13 @@
             background-color: #000;
         }
         .video-container {
-            width: 100%;
-            max-width: 800px;
+            width: 90%;             /* Nice padding on mobile/laptop edges */
+            max-width: 1280px;      /* Stops it from exploding on 4K screens */
             aspect-ratio: 16 / 9;
+            box-shadow: 0 0 100px rgba(150, 200, 255, 0.33); /* Subtle Blue Glow */
+            border: 1px solid #1a1a1a; /* Tiny border to define the edge */
+            border-radius: 8px;     /* Subtle rounded corners looks cleaner */
+            overflow: hidden;       /* Keeps the video inside the rounded corners */
         }
         .video-container video {
             width: 100%;
@@ -27,7 +31,7 @@
 <body>
     <div class="video-container">
         <video controls>
-            <source src="video.mp4" type="video/mp4">
+            <source src="https://assets.phys1160.nlangford.au/z5487536%20PHYS1160%20Experiment%20Final%20Video%20v6%20(24%20fps%2C%206000%20kbps).mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
